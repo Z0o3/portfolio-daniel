@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #061525;
+  --color-bg-secondary: #0a1f35;
+  --color-blue-deep: #0b3b75;
+  --color-blue-primary: #1677ff;
+  --color-blue-bright: #42b6ff;
+  --color-accent-cyan: #64d8ff;
+  --color-white-blue: #f4f9ff;
+  --color-muted: #9db2c9;
+  --color-line: rgba(120, 190, 255, 0.16);
+  --color-whatsapp: #25d366;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-blue-deep: var(--color-blue-deep);
+  --color-blue-primary: var(--color-blue-primary);
+  --color-blue-bright: var(--color-blue-bright);
+  --color-accent-cyan: var(--color-accent-cyan);
+  --color-white-blue: var(--color-white-blue);
+  --color-muted: var(--color-muted);
+  --color-whatsapp: var(--color-whatsapp);
+  --color-line: var(--color-line);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-white-blue);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-blue-primary);
+  color: var(--color-white-blue);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-blue-bright);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.grid-backdrop {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.label-mono {
+  font-family: var(--font-label);
+  letter-spacing: 0.08em;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Fondo de ondas del Hero — solo transform/opacity, animación barata en móvil */
+@keyframes wave-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.wave-layer {
+  animation: wave-drift linear infinite;
+}
+.wave-layer--slow {
+  animation-duration: 34s;
+}
+.wave-layer--mid {
+  animation-duration: 24s;
+  animation-direction: reverse;
+}
+.wave-layer--fast {
+  animation-duration: 18s;
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.glow-breathe {
+  animation: glow-breathe 9s ease-in-out infinite;
+}
