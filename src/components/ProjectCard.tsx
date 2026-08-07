@@ -1,8 +1,8 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 import type { Project } from "@/data/projects";
-import { cn } from "@/lib/utils";
+import { cn, formatUpdatedDate } from "@/lib/utils";
 
 export default function ProjectCard({
   project,
@@ -54,7 +54,14 @@ export default function ProjectCard({
         </ul>
       ) : null}
 
-      <div className="mt-5 flex items-center gap-4 pt-1">
+      <div className="mt-5 flex items-center justify-between gap-4 pt-1">
+        <span
+          className="label-mono inline-flex items-center gap-1 text-[10px] uppercase tracking-wide text-muted"
+          title="Fecha de actualización"
+        >
+          <Calendar className="h-3 w-3" aria-hidden="true" />
+          Actualizado: {formatUpdatedDate(project.updatedAt)}
+        </span>
         {hasUrl ? (
           <a
             href={project.url}
