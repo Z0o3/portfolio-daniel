@@ -12,6 +12,7 @@ export type Project = {
   year: string;
   featured: boolean;
   status: "Publicado" | "Demostración";
+  updatedAt: string; // ISO "YYYY-MM-DD" — se muestra como "Actualizado: <fecha>" en la tarjeta
 };
 
 /**
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 2,
@@ -40,10 +42,11 @@ export const projects: Project[] = [
     description:
       "Sitio para un consultorio veterinario en Celaya: consulta, cirugía, vacunación y agenda de citas por WhatsApp.",
     url: "https://k-nitoveterinaria.vercel.app/",
-    technologies: [],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 3,
@@ -53,10 +56,11 @@ export const projects: Project[] = [
     description:
       "Sitio para un consultorio dental en Querétaro, con servicios explicados paso a paso y agenda por WhatsApp.",
     url: "https://innovacion-dental.vercel.app/",
-    technologies: [],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 4,
@@ -70,6 +74,7 @@ export const projects: Project[] = [
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 5,
@@ -79,10 +84,11 @@ export const projects: Project[] = [
     description:
       "Sitio para una clínica dental con dos sucursales en Querétaro y atención de urgencias 24/7.",
     url: "https://clinicadentalelrocio.com/",
-    technologies: [],
+    technologies: ["GoHighLevel"],
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 6,
@@ -95,6 +101,7 @@ export const projects: Project[] = [
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 7,
@@ -108,6 +115,7 @@ export const projects: Project[] = [
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-07-31",
   },
   {
     id: 8,
@@ -121,6 +129,21 @@ export const projects: Project[] = [
     year: "",
     featured: false,
     status: "Publicado",
+    updatedAt: "2026-02-15",
+  },
+  {
+    id: 9,
+    slug: "animal-house",
+    title: "Animal House",
+    category: "Veterinarias",
+    description:
+      "Sitio para una clínica veterinaria en Apodaca, Nuevo León: consulta, cirugía, diagnóstico y atención para perros, gatos y animales exóticos.",
+    url: "https://github.com/Z0o3/animal-house",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    year: "",
+    featured: false,
+    status: "Publicado",
+    updatedAt: "2026-08-07",
   },
 ];
 
