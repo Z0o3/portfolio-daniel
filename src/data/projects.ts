@@ -1,4 +1,4 @@
-export type ProjectCategory = "Veterinarias" | "Salud" | "Belleza" | "Industria";
+export type ProjectCategory = "Veterinarias" | "Salud" | "Belleza" | "Industria" | "Gimnasios";
 
 export type Project = {
   id: number;
@@ -145,6 +145,20 @@ export const projects: Project[] = [
     status: "Publicado",
     updatedAt: "2026-08-07",
   },
+  {
+    id: 10,
+    slug: "4u-wellness-gym",
+    title: "4U Wellness Gym",
+    category: "Gimnasios",
+    description:
+      "Sitio para el gimnasio 4U Wellness Gym: presentación de planes, clases y contacto para agendar. Repo: https://github.com/Z0o3/4u-gym",
+    url: "https://4u-wellness-gym.vercel.app/",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    year: "",
+    featured: false,
+    status: "Publicado",
+    updatedAt: "2026-08-10",
+  },
 ];
 
-export const categories: ProjectCategory[] = ["Veterinarias", "Salud", "Belleza", "Industria"];
+export const categories: ProjectCategory[] = ["Veterinarias", "Salud", "Belleza", "Industria", "Gimnasios"];
