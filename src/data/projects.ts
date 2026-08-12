@@ -151,7 +151,7 @@ export const projects: Project[] = [
     title: "4U Wellness Gym",
     category: "Gimnasios",
     description:
-      "Sitio para el gimnasio 4U Wellness Gym: presentación de planes, clases y contacto para agendar. Repo: https://github.com/Z0o3/4u-gym",
+      "Sitio para el gimnasio 4U Wellness Gym: presentación de planes, clases y contacto para agendar.",
     url: "https://4u-wellness-gym.vercel.app/",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     year: "",
