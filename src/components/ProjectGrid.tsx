@@ -8,7 +8,9 @@ import ProjectCard from "./ProjectCard";
 export default function ProjectGrid() {
   const { filter } = useFilter();
 
-  const visible = projects.filter((project) => filter === "Todos" || project.category === filter);
+  const visible = projects
+    .filter((project) => filter === "Todos" || project.category === filter)
+    .sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : a.updatedAt > b.updatedAt ? -1 : 0));
 
   return (
     <div>
