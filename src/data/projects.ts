@@ -138,7 +138,7 @@ export const projects: Project[] = [
     category: "Veterinarias",
     description:
       "Sitio para una clínica veterinaria en Apodaca, Nuevo León: consulta, cirugía, diagnóstico y atención para perros, gatos y animales exóticos.",
-    url: "https://github.com/Z0o3/animal-house",
+    url: "https://animalhousevet.org/",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     year: "",
     featured: false,
