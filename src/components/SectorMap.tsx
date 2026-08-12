@@ -1,23 +1,28 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { categories } from "@/data/projects";
+import { categories, projects } from "@/data/projects";
 
-// Coordenadas fijas de los 4 nodos dentro de un viewBox de 400x400.
+// Coordenadas fijas de los 5 nodos dentro de un viewBox de 400x400.
 const nodes = [
   { category: categories[0], x: 90, y: 110, code: "SEC-01" },
   { category: categories[1], x: 300, y: 80, code: "SEC-02" },
   { category: categories[2], x: 320, y: 290, code: "SEC-03" },
   { category: categories[3], x: 100, y: 300, code: "SEC-04" },
+  { category: categories[4], x: 200, y: 190, code: "SEC-05" },
 ];
 
-// Conexiones entre nodos (forma un lazo que recorre los 4 sectores).
+// Conexiones entre nodos: lazo por los 4 sectores originales + nodo
+// central (Gimnasios) conectado a los cuatro como hub.
 const connections: [number, number][] = [
   [0, 1],
   [1, 2],
   [2, 3],
   [3, 0],
-  [0, 2],
+  [4, 0],
+  [4, 1],
+  [4, 2],
+  [4, 3],
 ];
 
 export default function SectorMap() {
@@ -110,7 +115,7 @@ export default function SectorMap() {
         fontSize="10"
         letterSpacing="0.12em"
       >
-        BLUE SECTOR ATLAS — 08 PROYECTOS
+        {`BLUE SECTOR ATLAS — ${String(projects.length).padStart(2, "0")} PROYECTOS`}
       </text>
     </svg>
   );
