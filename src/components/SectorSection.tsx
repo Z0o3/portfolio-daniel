@@ -1,6 +1,6 @@
 "use client";
 
-import { PawPrint, HeartPulse, Sparkles, Factory, ArrowRight } from "lucide-react";
+import { PawPrint, HeartPulse, Sparkles, Factory, Dumbbell, ArrowRight } from "lucide-react";
 import { useFilter } from "./FilterProvider";
 import type { ProjectCategory } from "@/data/projects";
 import { cn } from "@/lib/utils";
@@ -44,6 +44,14 @@ const sectors: {
       "Sitios estructurados para comunicar servicios, capacidad operativa, procesos y datos de contacto.",
     accent: "#0B3B75",
   },
+  {
+    category: "Gimnasios",
+    code: "05",
+    icon: Dumbbell,
+    description:
+      "Sitios para mostrar planes, clases, horarios e instalaciones, con contacto directo para inscribirse.",
+    accent: "#22C55E",
+  },
 ];
 
 export default function SectorSection() {
@@ -61,7 +69,7 @@ export default function SectorSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {sectors.map((sector) => {
             const Icon = sector.icon;
             return (
