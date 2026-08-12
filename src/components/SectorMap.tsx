@@ -208,7 +208,7 @@ export default function SectorMap() {
           fontSize="10"
           letterSpacing="0.12em"
         >
-          {`BLUE SECTOR ATLAS — ${String(projects.length).padStart(2, "0")} PROYECTOS`}
+          {`CONTADOR DE PROYECTOS — ${String(projects.length).padStart(2, "0")} PROYECTOS`}
         </text>
       </svg>
     </>
