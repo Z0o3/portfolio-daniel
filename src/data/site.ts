@@ -10,7 +10,7 @@ export const site = {
   tagline: "Web Designer & Developer",
   title: "Daniel | Diseño y desarrollo web para negocios",
   description:
-    "Portafolio de Daniel, diseñador y desarrollador de páginas web para negocios de Veterinaria, Salud, Belleza e Industria.",
+    "Portafolio de Daniel, diseñador y desarrollador de páginas web para negocios de Veterinaria, Salud, Belleza, Industria y Gimnasios.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   locale: "es-MX",
 
