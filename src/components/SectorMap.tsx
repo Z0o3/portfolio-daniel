@@ -12,7 +12,7 @@ const MIN_DIST = NODE_R * 2 + 6; // distancia mínima entre centros para no tras
 const SPRING_K = 0.2; // qué tan fuerte "jala" el nodo de regreso a su órbita
 const STEER_RATE = 0.5; // qué tan rápido retoma la velocidad tangencial deseada
 const RESTITUTION = 1.1; // "rebote": >1 exagera el cambio de dirección al chocar
-const BOUNCE_BOOST = 4; // multiplicador extra sobre el impulso del choque
+const BOUNCE_BOOST = 2.5; // multiplicador extra sobre el impulso del choque
 const MAX_SPEED = 320; // px/s, evita que un choque lo mande volando
 
 type NodeState = {
