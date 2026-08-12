@@ -9,10 +9,10 @@ const MIN_RADIUS = 55;
 const MAX_RADIUS = 170;
 const NODE_R = 26; // radio visual del círculo de cada nodo
 const MIN_DIST = NODE_R * 2 + 6; // distancia mínima entre centros para no traspasarse
-const SPRING_K = 1.2; // qué tan fuerte "jala" el nodo de regreso a su órbita
+const SPRING_K = 0.5; // qué tan fuerte "jala" el nodo de regreso a su órbita
 const STEER_RATE = 0.5; // qué tan rápido retoma la velocidad tangencial deseada
 const RESTITUTION = 1.35; // "rebote": >1 exagera el cambio de dirección al chocar
-const BOUNCE_BOOST = 1.6; // multiplicador extra sobre el impulso del choque
+const BOUNCE_BOOST = 2; // multiplicador extra sobre el impulso del choque
 const MAX_SPEED = 320; // px/s, evita que un choque lo mande volando
 
 type NodeState = {
