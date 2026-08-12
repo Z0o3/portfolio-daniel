@@ -27,7 +27,7 @@ export default function SectorMap() {
     <svg
       viewBox="0 0 400 400"
       role="img"
-      aria-label="Mapa de los cuatro sectores de trabajo: Veterinarias, Salud, Belleza e Industria, conectados entre sí."
+      aria-label="Mapa de los cinco sectores de trabajo: Veterinarias, Salud, Belleza, Industria y Gimnasios, conectados entre sí."
       className="h-full w-full"
     >
       <defs>
